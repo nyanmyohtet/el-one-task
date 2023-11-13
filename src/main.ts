@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain, Tray, Menu, nativeImage, Notification } from 'electron';
+import { app, BrowserWindow, Tray, Menu, nativeImage } from 'electron';
 import path from 'path';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -42,11 +42,11 @@ const createTray = () => {
     tray.setContextMenu(contextMenu)
 }
 
-const showNotification = () => {
-  const NOTIFICATION_TITLE = 'Basic Notification'
-  const NOTIFICATION_BODY = 'Notification from the Main process'
-  new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
-}
+// const showNotification = () => {
+//   const NOTIFICATION_TITLE = 'Basic Notification'
+//   const NOTIFICATION_BODY = 'Notification from the Main process'
+//   new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
+// }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -54,7 +54,7 @@ const showNotification = () => {
 app.on('ready', () => {
   createWindow()
   createTray()
-  showNotification()
+  // showNotification()
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common
