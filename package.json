@@ -1,7 +1,7 @@
 {
   "name": "el-one-task",
   "productName": "el-one-task",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Electron Application",
   "main": ".vite/build/main.js",
   "scripts": {
